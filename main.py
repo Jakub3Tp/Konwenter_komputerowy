@@ -1,4 +1,6 @@
-from PyQt6.QtWidgets import QDialog
+import sys
+
+from PyQt6.QtWidgets import QDialog, QApplication
 
 from layout import Ui_Dialog
 
@@ -10,15 +12,17 @@ class MyForm(QDialog):
         self.ui.setupUi(self)
         self.show()
 
-    def binary:
-
-    def octal:
-
-    def decimal:
-
-    def hexadecimal:
-
+    def binary(self):
+        binary = self.ui.binar.text()
+        if
+    def octal(self):
+        ocal = self.ui.octal.text()
+    def decimal(self):
+        self.ui.decimal.text()
+    def hexadecimal(self):
+        self.ui.hexadecimal.text()
 
 if __name__ == '__main__':
-
-
+    app = QApplication(sys.argv)
+    window = MyForm()
+    sys.exit(app.exec())
