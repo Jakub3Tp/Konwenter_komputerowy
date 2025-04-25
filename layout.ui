@@ -67,10 +67,17 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="2">
+    <item row="4" column="0">
      <widget class="QPushButton" name="change">
       <property name="text">
        <string>Zamień</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLabel" name="converted">
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </item>

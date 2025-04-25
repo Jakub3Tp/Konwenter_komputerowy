@@ -46,7 +46,11 @@ class Ui_Dialog(object):
         self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
         self.change = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
         self.change.setObjectName("change")
-        self.gridLayout.addWidget(self.change, 4, 2, 1, 1)
+        self.gridLayout.addWidget(self.change, 4, 0, 1, 1)
+        self.converted = QtWidgets.QLabel(parent=self.gridLayoutWidget)
+        self.converted.setText("")
+        self.converted.setObjectName("converted")
+        self.gridLayout.addWidget(self.converted, 4, 2, 1, 1)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)

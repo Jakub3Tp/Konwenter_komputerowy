@@ -1,6 +1,6 @@
 import sys
 
-from PyQt6.QtWidgets import QDialog, QApplication
+from PyQt6.QtWidgets import QDialog, QApplication, QMessageBox
 
 from layout import Ui_Dialog
 
@@ -10,17 +10,35 @@ class MyForm(QDialog):
         super().__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+        self.ui.change.clicked.connect(self.binary)
+        self.ui.change.clicked.connect(self.octal)
+        self.ui.change.clicked.connect(self.decimal)
+        self.ui.change.clicked.connect(self.hexadecimal)
         self.show()
 
     def binary(self):
         binary = self.ui.binar.text()
-        if
+        bin(int(binary, 2))
+        if not (c in '01' for c in binary):
+            print("Bład binarny")
+
     def octal(self):
-        ocal = self.ui.octal.text()
+        octal = self.ui.octal.text()
+        oct(int(octal, 8))
+        if not (c in '01234567' for c in octal):
+            print("Błąd ósemkowy")
+
     def decimal(self):
-        self.ui.decimal.text()
+        decimal = self.ui.decimal.text()
+        int(decimal, 10)
+        if not decimal.isdigit():
+            print("Błąd dziesiątkowy")
+
     def hexadecimal(self):
-        self.ui.hexadecimal.text()
+        hexadecimal = self.ui.hexadecimal.text()
+        hex(int(hexadecimal, 16))
+        if not int:
+            print("Błąd szesnastkowy")
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
